@@ -10,7 +10,7 @@ function NewUserForm() {
 	const submitForm = async (e) => {
 		e.preventDefault();
 		const body = { fullname, nickname, city, hobbies };
-		const response = await fetch("", {
+		const response = await fetch("http://localhost:4444/users", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -25,14 +25,14 @@ function NewUserForm() {
 			<form onSubmit={submitForm}>
 				<input
 					type="text"
-					placeholder="Please enter your Full Name..."
+					placeholder="Full Name..."
 					value={fullname}
 					onChange={(e) => setFullname(e.target.value)}
 				/>
 
 				<input
 					type="text"
-					placeholder="How do you prefer to be called?"
+					placeholder="Do you have a nickname?"
 					value={nickname}
 					onChange={(e) => setNickname(e.target.value)}
 				/>

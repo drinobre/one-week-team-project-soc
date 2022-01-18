@@ -10,10 +10,18 @@ function UsersPage() {
 	// searchBar.addEventListener("keyup", (e) => {});
 
 	const getUsers = async () => {
-		const response = await fetch("https://localhost5000/users");
+		const response = await fetch("http://localhost:4444/users");
 		const data = await response.json();
 		setUsers(data.payload);
-		console.log(users);
+		console.log(data.payload);
+	};
+
+	const deleteUser = async (userId) => {
+		const response = await fetch(`http://localhost:4444/users/${userId}`, {
+			method: "DELETE",
+		});
+		console.log(response);
+		setUsers(users.filter((user) => user.id !== userId));
 	};
 
 	useEffect(() => {
@@ -23,20 +31,19 @@ function UsersPage() {
 	return (
 		<div className="users-page">
 			<div className="search-bar">
-				<input
-					type="text"
-					placeholder="search for a bootcamper..."
-					id="search-bar"
-				/>
+				<input type="text" placeholder="bootcamper search..." id="search-bar" />
 			</div>
 			{users.map((user) => (
 				<DisplayUserCard
-					city={"birmingham"}
-					fullname={"rory maguire"}
-					nickname={"rors"}
+					city={user.city}
+					fullname={user.fullname}
+					nickname={user.nickname}
 					briefIntro={
 						"blah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blah"
 					}
+					image={user.profileImage}
+					userId={user.id}
+					deleteUser={deleteUser}
 				/>
 			))}
 		</div>

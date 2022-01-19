@@ -5,15 +5,31 @@ import DisplayUserCard from "../DisplayUserCard";
 function UsersPage() {
 	const [users, setUsers] = useState([]);
 
-	// const searchBar = document.getElementById("#search-bar");
+	// const searchBar = document.getElementById("searchBar");
+	// console.log(searchBar);
 
-	// searchBar.addEventListener("keyup", (e) => {});
+	// searchBar.addEventListener("keyup", (e) => {
+	// 	const searchedLetters = e.target.value.toLowerCase();
+	// 	console.log(searchedLetters);
+	// 	const filteredUsers = users.filter((user) => {
+	// 		return user.name.toLowerCase().includes(searchedLetters);
+	// 	});
+	// 	setUsers(filteredUsers);
+	// });
 
 	const getUsers = async () => {
-		const response = await fetch("https://localhost5000/users");
+		const response = await fetch("http://localhost:4444/users");
 		const data = await response.json();
 		setUsers(data.payload);
-		console.log(users);
+		console.log(data.payload);
+	};
+
+	const deleteUser = async (userId) => {
+		const response = await fetch(`http://localhost:4444/users/${userId}`, {
+			method: "DELETE",
+		});
+		console.log(response);
+		setUsers(users.filter((user) => user.id !== userId));
 	};
 
 	useEffect(() => {
@@ -22,21 +38,22 @@ function UsersPage() {
 
 	return (
 		<div className="users-page">
-			<div className="search-bar">
-				<input
-					type="text"
-					placeholder="search for a bootcamper..."
-					id="search-bar"
-				/>
+			<div>
+				<input type="text" placeholder="bootcamper search..." id="searchBar" />
 			</div>
 			{users.map((user) => (
 				<DisplayUserCard
-					city={"birmingham"}
-					fullname={"rory maguire"}
-					nickname={"rors"}
+					city={user.city}
+					fullname={user.fullname}
+					nickname={user.nickname}
 					briefIntro={
-						"blah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blah"
+						"hey everyone this is a simple test to show how the text will appear on the user profile cards - of course this is hard-coded and not dynamic but once we set up this functionality, it will be a message unique to everyone and what they choose to write on submission of their form "
 					}
+					profileImage={
+						"https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236_1280.png"
+					}
+					userId={user.id}
+					deleteUser={deleteUser}
 				/>
 			))}
 		</div>

@@ -1,13 +1,21 @@
 import React from "react";
 
-function DisplayUserCard({ city, nickname, fullname, briefIntro }) {
+function DisplayUserCard({
+	city,
+	nickname,
+	fullname,
+	briefIntro,
+	profileImage,
+	userId,
+	deleteUser,
+}) {
 	return (
 		<div className="userCard">
 			<div className="upper-container">
 				<div className="image-container"></div>
 				<img
-					src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.deviantart.com%2Fkarmaanddestiny%2Fart%2FDefault-user-icon-4-858661084&psig=AOvVaw2KxgdpyEQBqn4VJD3dIAnV&ust=1642597363033000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNDaw5Wuu_UCFQAAAAAdAAAAABAN"
-					alt=""
+					src={profileImage}
+					alt="profile-image"
 					height="100px"
 					width="100px"
 				/>
@@ -18,6 +26,9 @@ function DisplayUserCard({ city, nickname, fullname, briefIntro }) {
 			<h4>{city}</h4>
 			<p>{briefIntro}</p>
 			<button>Visit</button>
+			<button className="btn btn-danger" onClick={() => deleteUser(userId)}>
+				Delete
+			</button>
 		</div>
 	);
 }

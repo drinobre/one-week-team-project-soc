@@ -17,15 +17,17 @@ function UsersPage() {
 	// 	setUsers(filteredUsers);
 	// });
 
+	const API_URL = process.env.REACT_APP_API_URL;
+
 	const getUsers = async () => {
-		const response = await fetch("http://localhost:4444/users");
+		const response = await fetch(`${API_URL}/users`);
 		const data = await response.json();
 		setUsers(data.payload);
 		console.log(data.payload);
 	};
 
 	const deleteUser = async (userId) => {
-		const response = await fetch(`http://localhost:4444/users/${userId}`, {
+		const response = await fetch(`${API_URL}/users/${userId}`, {
 			method: "DELETE",
 		});
 		console.log(response);

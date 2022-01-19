@@ -18,16 +18,21 @@ function UsersPage() {
 	// });
 
 	const getUsers = async () => {
-		const response = await fetch("http://localhost:4444/users");
+		const response = await fetch(
+			"https://bootcampersproject.herokuapp.com/users"
+		);
 		const data = await response.json();
 		setUsers(data.payload);
 		console.log(data.payload);
 	};
 
 	const deleteUser = async (userId) => {
-		const response = await fetch(`http://localhost:4444/users/${userId}`, {
-			method: "DELETE",
-		});
+		const response = await fetch(
+			`https://bootcampersproject.herokuapp.com/users/${userId}`,
+			{
+				method: "DELETE",
+			}
+		);
 		console.log(response);
 		setUsers(users.filter((user) => user.id !== userId));
 	};

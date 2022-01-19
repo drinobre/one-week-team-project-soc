@@ -14,18 +14,20 @@ function NewUserForm() {
 	const [mostConfidentArea, setMostConfidentArea] = useState("");
 	const [improveKnowledge, setImproveKnowledge] = useState("");
 	const [favouriteQuote, setFavouriteQuote] = useState("");
-	
 
 	const submitForm = async (e) => {
 		e.preventDefault();
 		const body = { fullname, nickname, city, hobbies };
-		const response = await fetch("http://localhost:4444/users", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(body),
-		});
+		const response = await fetch(
+			"https://bootcampersproject.herokuapp.com/users",
+			{
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(body),
+			}
+		);
 		console.log(response);
 	};
 

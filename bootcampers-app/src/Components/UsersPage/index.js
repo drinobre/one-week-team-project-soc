@@ -17,12 +17,12 @@ function UsersPage() {
 	// 	setUsers(filteredUsers);
 	// });
 
-	const API_URL = process.env.REACT_APP_API_URL;
-	console.log(API_URL);
+	// const API_URL = process.env.REACT_APP_API_URL;
+	// console.log(API_URL);
 
 	const getUsers = async () => {
 		try {
-			const response = await fetch(`${API_URL}users`);
+			const response = await fetch(`http://localhost:4444/users`);
 
 			const data = await response.json();
 			setUsers(data.payload);
@@ -34,7 +34,7 @@ function UsersPage() {
 	};
 
 	const deleteUser = async (userId) => {
-		const response = await fetch(`${API_URL}users/${userId}`, {
+		const response = await fetch(`http://localhost:4444/users/${userId}`, {
 			method: "DELETE",
 		});
 

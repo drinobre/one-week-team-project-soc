@@ -21,11 +21,16 @@ function UsersPage() {
 	console.log(API_URL);
 
 	const getUsers = async () => {
-		const response = await fetch(`${API_URL}users`);
+		try {
+			const response = await fetch(`${API_URL}users`);
 
-		const data = await response.json();
-		setUsers(data.payload);
-		console.log(data.payload);
+			const data = await response.json();
+			setUsers(data.payload);
+			console.log(data.payload);
+		} catch (error) {
+			console.log(error.message);
+			console.log(error);
+		}
 	};
 
 	const deleteUser = async (userId) => {
@@ -46,21 +51,31 @@ function UsersPage() {
 			<div>
 				<input type="text" placeholder="bootcamper search..." id="searchBar" />
 			</div>
-			{users.map((user) => (
-				<DisplayUserCard
-					city={user.city}
-					fullname={user.fullname}
-					nickname={user.nickname}
-					briefIntro={
-						"hey everyone this is a simple test to show how the text will appear on the user profile cards - of course this is hard-coded and not dynamic but once we set up this functionality, it will be a message unique to everyone and what they choose to write on submission of their form "
-					}
-					profileImage={
-						"https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236_1280.png"
-					}
-					userId={user.id}
-					deleteUser={deleteUser}
-				/>
-			))}
+			<section className="user-cards">
+				{users.map((user) => (
+					<DisplayUserCard
+						firstname={user.firstname}
+						lastname={user.lastname}
+						nickname={user.nickname}
+						city={user.city}
+						briefintroduction={user.briefintroduction}
+						profileimage={
+							"https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236_1280.png"
+						}
+						userId={user.id}
+						deleteUser={deleteUser}
+						hobbies={user.hobbies}
+						favtvshows={user.favtvshows}
+						musictaste={user.musictaste}
+						favouritefood={user.favouritefood}
+						superpower={user.superpower}
+						mostconfidentareas={user.mostconfidentareas}
+						improveknowledge={user.improveknowledge}
+						favouritequote={user.favouritequote}
+						interestingfact={user.interestingfact}
+					/>
+				))}
+			</section>
 		</div>
 	);
 }

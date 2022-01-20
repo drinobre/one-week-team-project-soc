@@ -2,22 +2,39 @@ import React from "react";
 import { useState } from "react";
 
 function NewUserForm() {
-	const [fullname, setFullname] = useState("");
+	const [firstname, setFirstname] = useState("");
+	const [lastname, setLastname] = useState("");
 	const [nickname, setNickname] = useState("");
 	const [city, setCity] = useState("");
 	const [hobbies, setHobbies] = useState("");
-	const [tvShows, setTvShows] = useState("");
-	const [favouriteArtists, setFavouriteArtists] = useState("");
-	const [favouriteFood, setFavouriteFood] = useState("");
-	const [superPower, setSuperPower] = useState("");
-	const [briefIntroduction, setBriefIntroduction] = useState("");
-	const [mostConfidentArea, setMostConfidentArea] = useState("");
-	const [improveKnowledge, setImproveKnowledge] = useState("");
-	const [favouriteQuote, setFavouriteQuote] = useState("");
+	const [favtvshows, setFavtvshows] = useState("");
+	const [musictaste, setMusictaste] = useState("");
+	const [favouritefood, setFavouritefood] = useState("");
+	const [superpower, setSuperpower] = useState("");
+	const [briefintroduction, setBriefintroduction] = useState("");
+	const [mostconfidentareas, setMostconfidentareas] = useState("");
+	const [improveknowledge, setImproveknowledge] = useState("");
+	const [favouritequote, setFavouritequote] = useState("");
+	const [interestingfact, setInterestingfact] = useState("");
 
 	const submitForm = async (e) => {
 		e.preventDefault();
-		const body = { fullname, nickname, city, hobbies };
+		const body = {
+			firstname,
+			lastname,
+			nickname,
+			briefintroduction,
+			city,
+			hobbies,
+			favtvshows,
+			musictaste,
+			favouritefood,
+			superpower,
+			mostconfidentareas,
+			improveknowledge,
+			favouritequote,
+			interestingfact,
+		};
 		const response = await fetch(
 			"https://bootcampersproject.herokuapp.com/users",
 			{
@@ -32,91 +49,206 @@ function NewUserForm() {
 	};
 
 	return (
-		<div className="NewUserForm">
-			<form onSubmit={submitForm}>
+		<div className="NewUserForm-container">
+			<form className="NewUserForm" onSubmit={submitForm}>
+				<label for="first-name">First Name</label>
 				<input
+					required
+					id="first-name"
+					required
 					type="text"
-					placeholder="Full Name..."
-					value={fullname}
-					onChange={(e) => setFullname(e.target.value)}
+					required
+					placeholder="First Name..."
+					required
+					value={firstname}
+					required
+					onChange={(e) => setFirstname(e.target.value)}
+					required
 				/>
-
+				<label for="last-name">Last Name</label>
 				<input
+					required
+					id="last-name"
+					required
 					type="text"
-					placeholder="Do you have a nickname?"
+					required
+					placeholder="Last Name..."
+					required
+					value={lastname}
+					required
+					onChange={(e) => setLastname(e.target.value)}
+					required
+				/>
+				<label for="nickname">Nickname</label>
+				<input
+					required
+					id="nickname"
+					required
+					type="text"
+					required
+					placeholder="Nickname..."
+					required
 					value={nickname}
+					required
 					onChange={(e) => setNickname(e.target.value)}
+					required
 				/>
-
+				<label for="city">Location</label>
 				<input
+					required
+					id="city"
+					required
 					type="text"
+					required
 					placeholder="Where are you based...?"
+					required
 					value={city}
+					required
 					onChange={(e) => setCity(e.target.value)}
+					required
 				/>
-				<input
+				<label for="brief-intro">Brief Intro</label>
+				<textarea
+					required
+					id="brief-intro"
+					required
 					type="text"
+					required
+					placeholder="Brief introduction..."
+					required
+					value={briefintroduction}
+					required
+					onChange={(e) => setBriefintroduction(e.target.value)}
+					required
+				/>
+				<label for="hobbies">Hobbies</label>
+				<input
+					required
+					id="hobbies"
+					required
+					type="text"
+					required
 					placeholder="Got any hobbies...?"
+					required
 					value={hobbies}
+					required
 					onChange={(e) => setHobbies(e.target.value)}
+					required
 				/>
-
+				<label for="tvshows">Favourite shows and films</label>
 				<input
+					required
+					id="tvshows"
+					required
 					type="text"
-					placeholder="What are you favourite tv shows...?"
-					value={tvShows}
-					onChange={(e) => setTvShows(e.target.value)}
+					required
+					placeholder="Shows and films..?"
+					required
+					value={favtvshows}
+					required
+					onChange={(e) => setFavtvshows(e.target.value)}
+					required
 				/>
-
+				<label for="music-taste">Music Taste</label>
 				<input
+					required
+					id="music-taste"
+					required
 					type="text"
-					placeholder="What are your favourite musical artists...?"
-					value={favouriteArtists}
-					onChange={(e) => setFavouriteArtists(e.target.value)}
+					required
+					placeholder="What are you into...?"
+					required
+					value={musictaste}
+					required
+					onChange={(e) => setMusictaste(e.target.value)}
+					required
 				/>
-
+				<label for="favourite-foods">Favourite foods</label>
 				<input
+					required
+					id="favourite-foods"
+					required
 					type="text"
-					placeholder="What is your favourite food...?"
-					value={favouriteFood}
-					onChange={(e) => setFavouriteFood(e.target.value)}
+					required
+					placeholder="Favourite foods...?"
+					required
+					value={favouritefood}
+					required
+					onChange={(e) => setFavouritefood(e.target.value)}
+					required
 				/>
-
+				<label for="superpower">Superpower</label>
 				<input
+					required
+					id="superpower"
+					required
 					type="text"
-					placeholder="What is your superpower...?"
-					value={superPower}
-					onChange={(e) => setSuperPower(e.target.value)}
+					required
+					placeholder="What superpower would you want...?"
+					required
+					value={superpower}
+					required
+					onChange={(e) => setSuperpower(e.target.value)}
+					required
 				/>
-
+				<label for="confident-areas">Confident learning areas</label>
 				<input
+					required
+					id="confident-areas"
+					required
 					type="text"
-					placeholder="Tell us a little about yourself"
-					value={briefIntroduction}
-					onChange={(e) => setBriefIntroduction(e.target.value)}
+					required
+					placeholder="In which areas do you feel comfortable...?"
+					required
+					value={mostconfidentareas}
+					required
+					onChange={(e) => setMostconfidentareas(e.target.value)}
+					required
 				/>
-
+				<label for="confident-areas">Areas to improve</label>
 				<input
+					required
+					id="confident-areas"
+					required
 					type="text"
-					placeholder="In what coding language are you most confident...?"
-					value={mostConfidentArea}
-					onChange={(e) => setMostConfidentArea(e.target.value)}
+					required
+					placeholder="Where can you improve...?"
+					required
+					value={improveknowledge}
+					required
+					onChange={(e) => setImproveknowledge(e.target.value)}
+					required
 				/>
-
+				<label for="favourite-quote">Favourite Quote</label>
 				<input
+					required
+					id="favourite-quote"
+					required
 					type="text"
-					placeholder="In what coding language would you like to improve your knowledge...?"
-					value={improveKnowledge}
-					onChange={(e) => setImproveKnowledge(e.target.value)}
-				/>
-
-				<input
-					type="text"
+					required
 					placeholder="What is your favourite quote...?"
-					value={favouriteQuote}
-					onChange={(e) => setFavouriteQuote(e.target.value)}
+					required
+					value={favouritequote}
+					required
+					onChange={(e) => setFavouritequote(e.target.value)}
+					required
 				/>
-				<button className="btn btn-success">Add</button>
+
+				<label for="interesting-fact">Most interesting fact you know</label>
+				<input
+					required
+					id="interesting-fact"
+					required
+					type="text"
+					required
+					placeholder="Most interesting fact...?"
+					required
+					value={interestingfact}
+					required
+					onChange={(e) => setInterestingfact(e.target.value)}
+					required
+				/>
+				<button className="submit-btn">Submit</button>
 			</form>
 		</div>
 	);

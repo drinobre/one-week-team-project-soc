@@ -43,7 +43,11 @@ function UsersPage() {
 	};
 
 	useEffect(() => {
-		getUsers();
+		async function retrieveData() {
+			await getUsers();
+		}
+
+		retrieveData();
 	}, []);
 
 	return (

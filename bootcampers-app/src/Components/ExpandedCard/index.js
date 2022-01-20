@@ -8,7 +8,6 @@ function ExpandedCard({
 	briefintroduction,
 	hobbies,
 	profileimage,
-	hobbies,
 	favtvshows,
 	musictaste,
 	favouritefood,

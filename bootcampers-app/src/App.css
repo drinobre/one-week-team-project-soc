@@ -274,3 +274,24 @@ textarea {
 .submit-btn:hover {
 	background: forestgreen;
 }
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	justify-content: space-evenly;
+	height: 50px;
+	width: 100vw;
+	color: white;
+	background-color: green;
+	flex-wrap: nowrap;
+	flex-direction: row;
+}
+
+.users-page {
+	background-image: url("https://images.typeform.com/images/jGgjDAamS9S7/background/large");
+	background-size: cover;
+	background-repeat: repeat;
+	height: 100vh;
+	width: 100vw;
+}

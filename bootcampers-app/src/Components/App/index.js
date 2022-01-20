@@ -1,14 +1,17 @@
 import UsersPage from "../UsersPage";
 import NewUserForm from "../NewUserForm";
 import LandingPage from "../LandingPage";
+import { Routes, Route, Link } from "react-router-dom";
 import "../../App.css";
 
 function App() {
 	return (
 		<div className="App">
-			<LandingPage />
-			<NewUserForm />
-			<UsersPage />
+			<Routes>
+				<Route path="/" element={<LandingPage />} />
+				<Route path="form" element={<NewUserForm />} />
+				<Route path="users" element={<UsersPage />} />
+			</Routes>
 		</div>
 	);
 }

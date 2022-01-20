@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import DisplayUserCard from "../DisplayUserCard";
+import { Routes, Route, Link } from "react-router-dom";
 
 function UsersPage() {
 	const [users, setUsers] = useState([]);
@@ -33,31 +34,43 @@ function UsersPage() {
 		}
 	};
 
-	const deleteUser = async (userId) => {
-		const response = await fetch(`http://localhost:4444/users/${userId}`, {
+	const deleteUser = async (id) => {
+		const response = await fetch(`http://localhost:4444/users/${id}`, {
 			method: "DELETE",
 		});
 
 		console.log(response);
-		setUsers(users.filter((user) => user.id !== userId));
+		setUsers(users.filter((user) => user.id !== id));
 	};
 
 	useEffect(() => {
-		async function retrieveData() {
-			await getUsers();
-		}
-
-		retrieveData();
+		getUsers();
 	}, []);
 
 	return (
 		<div className="users-page">
 			<div>
-				<input type="text" placeholder="bootcamper search..." id="searchBar" />
+				<div className="navbar">
+					<nav>
+						<div>
+							<Link to="/">Home</Link>
+
+							<Link to="/form">Form</Link>
+
+							<Link to="/user">Bootcampers</Link>
+						</div>
+					</nav>
+				</div>
+				<input
+					type="text"
+					placeholder="search for a bootcamper.."
+					id="searchBar"
+				/>
 			</div>
 			<section className="user-cards">
 				{users.map((user) => (
 					<DisplayUserCard
+						id={user.id}
 						firstname={user.firstname}
 						lastname={user.lastname}
 						nickname={user.nickname}
@@ -66,7 +79,6 @@ function UsersPage() {
 						profileimage={
 							"https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236_1280.png"
 						}
-						userId={user.id}
 						deleteUser={deleteUser}
 						hobbies={user.hobbies}
 						favtvshows={user.favtvshows}

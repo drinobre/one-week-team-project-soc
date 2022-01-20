@@ -8,8 +8,8 @@ function DisplayUserCard({
 	city,
 	briefintroduction,
 	profileimage,
-	userid,
-	deleteuser,
+	id,
+	deleteUser,
 	hobbies,
 	favtvshows,
 	musictaste,
@@ -21,7 +21,7 @@ function DisplayUserCard({
 	interestingfact,
 }) {
 	return (
-		<div className="userCard">
+		<div className="userCard" key={id}>
 			<div className="upper-container">
 				<div className="image-container">
 					<img
@@ -41,8 +41,7 @@ function DisplayUserCard({
 				<h4>{city}</h4>
 				<p>{briefintroduction}</p>
 			</div>
-			<button>Visit</button>
-			<button className="btn btn-danger" onClick={() => deleteuser(userid)}>
+			<button className="btn btn-danger" onClick={() => deleteUser(id)}>
 				Delete
 			</button>
 			<ExpandedCard

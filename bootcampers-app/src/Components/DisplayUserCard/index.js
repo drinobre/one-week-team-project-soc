@@ -8,7 +8,7 @@ function DisplayUserCard({
 	city,
 	briefintroduction,
 	profileimage,
-	// userid,
+	userid,
 	deleteuser,
 	hobbies,
 	favtvshows,
@@ -25,7 +25,7 @@ function DisplayUserCard({
 			<div className="upper-container">
 				<div className="image-container">
 					<img
-						src={profilimage}
+						src={profileimage}
 						alt="profile-image"
 						height="100px"
 						width="100px"
@@ -42,7 +42,7 @@ function DisplayUserCard({
 				<p>{briefintroduction}</p>
 			</div>
 			<button>Visit</button>
-			<button className="btn btn-danger" onClick={() => deleteuser(userId)}>
+			<button className="btn btn-danger" onClick={() => deleteuser(userid)}>
 				Delete
 			</button>
 			<ExpandedCard

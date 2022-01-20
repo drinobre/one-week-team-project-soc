@@ -35,23 +35,20 @@ function NewUserForm() {
 			favouritequote,
 			interestingfact,
 		};
-		const response = await fetch(
-			"https://bootcampersproject.herokuapp.com/users",
-			{
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify(body),
-			}
-		);
+		const response = await fetch(`http://localhost:4444/users`, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(body),
+		});
 		console.log(response);
 	};
 
 	return (
 		<div className="NewUserForm-container">
 			<form className="NewUserForm" onSubmit={submitForm}>
-				<label for="first-name">First Name</label>
+				<label htmlFor="first-name">First Name</label>
 				<input
 					required
 					id="first-name"
@@ -65,7 +62,7 @@ function NewUserForm() {
 					onChange={(e) => setFirstname(e.target.value)}
 					required
 				/>
-				<label for="last-name">Last Name</label>
+				<label htmlFor="last-name">Last Name</label>
 				<input
 					required
 					id="last-name"
@@ -79,7 +76,7 @@ function NewUserForm() {
 					onChange={(e) => setLastname(e.target.value)}
 					required
 				/>
-				<label for="nickname">Nickname</label>
+				<label htmlFor="nickname">Nickname</label>
 				<input
 					required
 					id="nickname"
@@ -93,7 +90,7 @@ function NewUserForm() {
 					onChange={(e) => setNickname(e.target.value)}
 					required
 				/>
-				<label for="city">Location</label>
+				<label htmlFor="city">Location</label>
 				<input
 					required
 					id="city"
@@ -107,7 +104,7 @@ function NewUserForm() {
 					onChange={(e) => setCity(e.target.value)}
 					required
 				/>
-				<label for="brief-intro">Brief Intro</label>
+				<label htmlFor="brief-intro">Brief Intro</label>
 				<textarea
 					required
 					id="brief-intro"
@@ -121,7 +118,7 @@ function NewUserForm() {
 					onChange={(e) => setBriefintroduction(e.target.value)}
 					required
 				/>
-				<label for="hobbies">Hobbies</label>
+				<label htmlFor="hobbies">Hobbies</label>
 				<input
 					required
 					id="hobbies"
@@ -135,7 +132,7 @@ function NewUserForm() {
 					onChange={(e) => setHobbies(e.target.value)}
 					required
 				/>
-				<label for="tvshows">Favourite shows and films</label>
+				<label htmlFor="tvshows">Favourite shows and films</label>
 				<input
 					required
 					id="tvshows"
@@ -149,7 +146,7 @@ function NewUserForm() {
 					onChange={(e) => setFavtvshows(e.target.value)}
 					required
 				/>
-				<label for="music-taste">Music Taste</label>
+				<label htmlFor="music-taste">Music Taste</label>
 				<input
 					required
 					id="music-taste"
@@ -163,7 +160,7 @@ function NewUserForm() {
 					onChange={(e) => setMusictaste(e.target.value)}
 					required
 				/>
-				<label for="favourite-foods">Favourite foods</label>
+				<label htmlFor="favourite-foods">Favourite foods</label>
 				<input
 					required
 					id="favourite-foods"
@@ -177,7 +174,7 @@ function NewUserForm() {
 					onChange={(e) => setFavouritefood(e.target.value)}
 					required
 				/>
-				<label for="superpower">Superpower</label>
+				<label htmlFor="superpower">Superpower</label>
 				<input
 					required
 					id="superpower"
@@ -191,7 +188,7 @@ function NewUserForm() {
 					onChange={(e) => setSuperpower(e.target.value)}
 					required
 				/>
-				<label for="confident-areas">Confident learning areas</label>
+				<label htmlFor="confident-areas">Confident learning areas</label>
 				<input
 					required
 					id="confident-areas"
@@ -205,7 +202,7 @@ function NewUserForm() {
 					onChange={(e) => setMostconfidentareas(e.target.value)}
 					required
 				/>
-				<label for="confident-areas">Areas to improve</label>
+				<label htmlFor="confident-areas">Areas to improve</label>
 				<input
 					required
 					id="confident-areas"
@@ -219,7 +216,7 @@ function NewUserForm() {
 					onChange={(e) => setImproveknowledge(e.target.value)}
 					required
 				/>
-				<label for="favourite-quote">Favourite Quote</label>
+				<label htmlFor="favourite-quote">Favourite Quote</label>
 				<input
 					required
 					id="favourite-quote"
@@ -234,7 +231,7 @@ function NewUserForm() {
 					required
 				/>
 
-				<label for="interesting-fact">Most interesting fact you know</label>
+				<label htmlFor="interesting-fact">Most interesting fact you know</label>
 				<input
 					required
 					id="interesting-fact"

@@ -46,152 +46,165 @@ function NewUserForm() {
 		console.log(response);
 	};
 
+	const linkStyle = {
+		margin: "1rem",
+		textDecoration: "none",
+		color: "blue",
+	};
+
 	return (
-		<div className="NewUserForm-container">
-			<div className="navbar">
-				<nav>
-					<div>
+		<>
+			<div className="NewUserForm-container">
+				<div className="navbar">
+					<div className="navbar-links" style={linkStyle}>
 						<Link to="/">Home</Link>
-
-						<Link to="/form">Form</Link>
-
-						<Link to="/user">Bootcampers</Link>
 					</div>
-				</nav>
-			</div>
-			<form className="NewUserForm" onSubmit={submitForm}>
-				<label htmlFor="first-name">First Name</label>
-				<input
-					id="first-name"
-					type="text"
-					placeholder="First Name..."
-					value={firstname}
-					onChange={(e) => setFirstname(e.target.value)}
-					required
-				/>
-				<label htmlFor="last-name">Last Name</label>
-				<input
-					id="last-name"
-					type="text"
-					placeholder="Last Name..."
-					value={lastname}
-					onChange={(e) => setLastname(e.target.value)}
-					required
-				/>
-				<label htmlFor="nickname">Nickname</label>
-				<input
-					id="nickname"
-					type="text"
-					placeholder="Nickname..."
-					value={nickname}
-					onChange={(e) => setNickname(e.target.value)}
-					required
-				/>
-				<label htmlFor="city">Location</label>
-				<input
-					id="city"
-					type="text"
-					placeholder="Where are you based...?"
-					value={city}
-					onChange={(e) => setCity(e.target.value)}
-					required
-				/>
-				<label htmlFor="brief-intro">Brief Intro</label>
-				<textarea
-					id="brief-intro"
-					type="text"
-					placeholder="Brief introduction..."
-					value={briefintroduction}
-					onChange={(e) => setBriefintroduction(e.target.value)}
-					required
-				/>
-				<label htmlFor="hobbies">Hobbies</label>
-				<input
-					id="hobbies"
-					type="text"
-					placeholder="Got any hobbies...?"
-					value={hobbies}
-					onChange={(e) => setHobbies(e.target.value)}
-					required
-				/>
-				<label htmlFor="tvshows">Favourite shows and films</label>
-				<input
-					id="tvshows"
-					type="text"
-					placeholder="Shows and films..?"
-					value={favtvshows}
-					onChange={(e) => setFavtvshows(e.target.value)}
-					required
-				/>
-				<label htmlFor="music-taste">Music Taste</label>
-				<input
-					id="music-taste"
-					type="text"
-					placeholder="What are you into...?"
-					value={musictaste}
-					onChange={(e) => setMusictaste(e.target.value)}
-					required
-				/>
-				<label htmlFor="favourite-foods">Favourite foods</label>
-				<input
-					id="favourite-foods"
-					type="text"
-					placeholder="Favourite foods...?"
-					value={favouritefood}
-					onChange={(e) => setFavouritefood(e.target.value)}
-					required
-				/>
-				<label htmlFor="superpower">Superpower</label>
-				<input
-					id="superpower"
-					type="text"
-					placeholder="What superpower would you want...?"
-					value={superpower}
-					onChange={(e) => setSuperpower(e.target.value)}
-					required
-				/>
-				<label htmlFor="confident-areas">Confident learning areas</label>
-				<input
-					id="confident-areas"
-					type="text"
-					placeholder="In which areas do you feel comfortable...?"
-					value={mostconfidentareas}
-					onChange={(e) => setMostconfidentareas(e.target.value)}
-					required
-				/>
-				<label htmlFor="confident-areas">Areas to improve</label>
-				<input
-					id="confident-areas"
-					type="text"
-					placeholder="Where can you improve...?"
-					value={improveknowledge}
-					onChange={(e) => setImproveknowledge(e.target.value)}
-					required
-				/>
-				<label htmlFor="favourite-quote">Favourite Quote</label>
-				<input
-					id="favourite-quote"
-					type="text"
-					placeholder="What is your favourite quote...?"
-					value={favouritequote}
-					onChange={(e) => setFavouritequote(e.target.value)}
-					required
-				/>
+					<div>
+						<h1 id="navbar-title">THE BOOTCAMPER CATALOG</h1>
+					</div>
+					<div className="navbar-links" style={linkStyle}>
+						<Link to="/form">Form</Link>
+					</div>
+					<div className="navbar-links" style={linkStyle}>
+						<Link to="/users">Bootcampers</Link>
+					</div>
+				</div>
+				<form className="NewUserForm" onSubmit={submitForm}>
+					<label htmlFor="first-name">First Name</label>
+					<input
+						id="first-name"
+						type="text"
+						placeholder="First Name..."
+						value={firstname}
+						onChange={(e) => setFirstname(e.target.value)}
+						required
+					/>
+					<label htmlFor="last-name">Last Name</label>
+					<input
+						id="last-name"
+						type="text"
+						placeholder="Last Name..."
+						value={lastname}
+						onChange={(e) => setLastname(e.target.value)}
+						required
+					/>
+					<label htmlFor="nickname">Nickname</label>
+					<input
+						id="nickname"
+						type="text"
+						placeholder="Nickname..."
+						value={nickname}
+						onChange={(e) => setNickname(e.target.value)}
+						required
+					/>
+					<label htmlFor="city">Location</label>
+					<input
+						id="city"
+						type="text"
+						placeholder="Where are you based...?"
+						value={city}
+						onChange={(e) => setCity(e.target.value)}
+						required
+					/>
+					<label htmlFor="brief-intro">Brief Intro</label>
+					<textarea
+						id="brief-intro"
+						type="text"
+						placeholder="Brief introduction..."
+						value={briefintroduction}
+						onChange={(e) => setBriefintroduction(e.target.value)}
+						required
+					/>
+					<label htmlFor="hobbies">Hobbies</label>
+					<input
+						id="hobbies"
+						type="text"
+						placeholder="Got any hobbies...?"
+						value={hobbies}
+						onChange={(e) => setHobbies(e.target.value)}
+						required
+					/>
+					<label htmlFor="tvshows">Favourite shows and films</label>
+					<input
+						id="tvshows"
+						type="text"
+						placeholder="Shows and films..?"
+						value={favtvshows}
+						onChange={(e) => setFavtvshows(e.target.value)}
+						required
+					/>
+					<label htmlFor="music-taste">Music Taste</label>
+					<input
+						id="music-taste"
+						type="text"
+						placeholder="What are you into...?"
+						value={musictaste}
+						onChange={(e) => setMusictaste(e.target.value)}
+						required
+					/>
+					<label htmlFor="favourite-foods">Favourite foods</label>
+					<input
+						id="favourite-foods"
+						type="text"
+						placeholder="Favourite foods...?"
+						value={favouritefood}
+						onChange={(e) => setFavouritefood(e.target.value)}
+						required
+					/>
+					<label htmlFor="superpower">Superpower</label>
+					<input
+						id="superpower"
+						type="text"
+						placeholder="What superpower would you want...?"
+						value={superpower}
+						onChange={(e) => setSuperpower(e.target.value)}
+						required
+					/>
+					<label htmlFor="confident-areas">Confident learning areas</label>
+					<input
+						id="confident-areas"
+						type="text"
+						placeholder="In which areas do you feel comfortable...?"
+						value={mostconfidentareas}
+						onChange={(e) => setMostconfidentareas(e.target.value)}
+						required
+					/>
+					<label htmlFor="confident-areas">Areas to improve</label>
+					<input
+						id="confident-areas"
+						type="text"
+						placeholder="Where can you improve...?"
+						value={improveknowledge}
+						onChange={(e) => setImproveknowledge(e.target.value)}
+						required
+					/>
+					<label htmlFor="favourite-quote">Favourite Quote</label>
+					<input
+						id="favourite-quote"
+						type="text"
+						placeholder="What is your favourite quote...?"
+						value={favouritequote}
+						onChange={(e) => setFavouritequote(e.target.value)}
+						required
+					/>
 
-				<label htmlFor="interesting-fact">Most interesting fact you know</label>
-				<input
-					id="interesting-fact"
-					type="text"
-					placeholder="Most interesting fact...?"
-					value={interestingfact}
-					onChange={(e) => setInterestingfact(e.target.value)}
-					required
-				/>
-				<button className="submit-btn" onClick={submitForm}>
-					Submit
-				</button>
-			</form>
-		</div>
+					<label htmlFor="interesting-fact">
+						Most interesting fact you know
+					</label>
+					<input
+						id="interesting-fact"
+						type="text"
+						placeholder="Most interesting fact...?"
+						value={interestingfact}
+						onChange={(e) => setInterestingfact(e.target.value)}
+						required
+					/>
+					<button className="submit-btn" onClick={submitForm}>
+						Submit
+					</button>
+				</form>
+			</div>
+		</>
 	);
 }
 

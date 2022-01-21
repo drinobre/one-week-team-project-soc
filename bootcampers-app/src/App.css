@@ -111,6 +111,7 @@ p {
 .landingPage {
 	display: flex;
 	align-items: center;
+	flex-direction: column;
 	justify-content: center;
 	height: 100vh;
 	width: 100vw;
@@ -121,7 +122,12 @@ p {
 
 #app-title {
 	color: white;
-	font-size: 4em;
+	font-size: 7em;
+	font-weight: 600;
+}
+
+.enter-site {
+	transform: translate(0, 250px);
 }
 
 .NewUserForm-container {
@@ -220,7 +226,7 @@ textarea {
 	grid-auto-rows: minmax(200px, auto);
 	grid-gap: 3rem;
 	margin-bottom: 0;
-	/* border: 2px red solid; */
+	border: 2px red solid;
 	box-sizing: border-box;
 	max-width: 100vw;
 	padding: 1rem;

@@ -8,6 +8,9 @@ function LandingPage() {
 			<div>
 				<h1 id="app-title">THE BOOTCAMPER CATALOG</h1>
 			</div>
+			<div className="enter-site">
+				<h1>ENTER SITE</h1>
+			</div>
 			<div>
 				<Link to="/users">
 					<img

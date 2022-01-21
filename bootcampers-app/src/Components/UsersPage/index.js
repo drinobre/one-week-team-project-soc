@@ -124,6 +124,75 @@ function UsersPage() {
 							/>
 						</div>
 					))}
+					<DisplayUserCard
+						firstname={"Gordon"}
+						lastname={"Ramsey"}
+						nickname={"Gordie"}
+						city={"London"}
+						briefintroduction={
+							"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere neque diam, nec vehicula orci porttitor sed. Fusce dictum dolor sed ornare auctor. Sed pharetra quam nisi, a posuere mi fermentum ac. Aenean sagittis dui cursus libero pharetra, ultricies porttitor nunc tincidunt. Integer tincidunt at nulla quis blandit. Mauris eleifend tristique"
+						}
+						profileimage={
+							"https://parade.com/wp-content/uploads/2018/10/GordonRamsay_KitchenMaster-FTR.jpg"
+						}
+						id={434}
+						deleteUser={deleteUser}
+						hobbies={"Yelling at people"}
+						favtvshows={"hell's kitchen, kitchen nightmares, masterchef"}
+						musictaste={"bon jovi"}
+						favouritefood={"my own food"}
+						superpower={"ultra loud voice"}
+						mostconfidentareas={"cooking"}
+						improveknowledge={"don't need to "}
+						favouritequote={"my gran could do it better"}
+						interestingfact={"I'm the best chef in the world"}
+					/>
+					<DisplayUserCard
+						firstname={"Cristiano"}
+						lastname={"Ronaldo"}
+						nickname={"CR7"}
+						city={"Manchester"}
+						briefintroduction={
+							"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere neque diam, nec vehicula orci porttitor sed. Fusce dictum dolor sed ornare auctor. Sed pharetra quam nisi, a posuere mi fermentum ac. Aenean sagittis dui cursus libero pharetra, ultricies porttitor nunc tincidunt. Integer tincidunt at nulla quis blandit. Mauris eleifend tristique"
+						}
+						profileimage={
+							"https://www.biography.com/.image/t_share/MTc5OTQ5OTg4NjY5ODI2MTcw/gettyimages-971463110.jpg"
+						}
+						id={45454}
+						deleteUser={deleteUser}
+						hobbies={"Yelling at people"}
+						favtvshows={"hell's kitchen, kitchen nightmares, masterchef"}
+						musictaste={"bon jovi"}
+						favouritefood={"my own food"}
+						superpower={"ultra loud voice"}
+						mostconfidentareas={"cooking"}
+						improveknowledge={"don't need to "}
+						favouritequote={"SIUUUUUUUUUUUU"}
+						interestingfact={"I'm the best chef in the world"}
+					/>
+					<DisplayUserCard
+						firstname={"Michelle"}
+						lastname={"Obama"}
+						nickname={"Mi Mi"}
+						city={"Washington DC"}
+						briefintroduction={
+							"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere neque diam, nec vehicula orci porttitor sed. Fusce dictum dolor sed ornare auctor. Sed pharetra quam nisi, a posuere mi fermentum ac. Aenean sagittis dui cursus libero pharetra, ultricies porttitor nunc tincidunt. Integer tincidunt at nulla quis blandit. Mauris eleifend tristique"
+						}
+						profileimage={
+							"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Michelle_Obama_2013_official_portrait.jpg/1200px-Michelle_Obama_2013_official_portrait.jpg"
+						}
+						id={45454}
+						deleteUser={deleteUser}
+						hobbies={"Yelling at people"}
+						favtvshows={"hell's kitchen, kitchen nightmares, masterchef"}
+						musictaste={"bon jovi"}
+						favouritefood={"my own food"}
+						superpower={"ultra loud voice"}
+						mostconfidentareas={"cooking"}
+						improveknowledge={"don't need to "}
+						favouritequote={"my gran could do it better"}
+						interestingfact={"I'm the best chef in the world"}
+					/>
 				</section>
 			</div>
 		</>

@@ -11,7 +11,7 @@ function ExpandedCard(props) {
 			aria-labelledby="contained-modal-title-vcenter"
 			centered
 		>
-			<Modal.Header closeButton>
+			<Modal.Header closeButton className="modal-header">
 				<Modal.Title id="contained-modal-title-vcenter">
 					{props.firstname} {props.lastname}
 					<h6>{props.nickname}</h6>

@@ -29,45 +29,54 @@ function DisplayUserCard({
 					<img
 						src={profileimage}
 						alt="profile-image"
-						height="200px"
-						width="200px"
+						height="300px"
+						width="300px"
 					/>
 				</div>
 			</div>
 			<div className="lower-container">
-				<h3>
-					{firstname} {lastname}
-				</h3>
-				<h3>{nickname}</h3>
-				<h4>{city}</h4>
-				<p>{briefintroduction}</p>
-				<button className="btn btn-danger" onClick={() => deleteUser(id)}>
-					Delete
-				</button>
+				<div className="card-content">
+					<h3>
+						{firstname} {lastname}
+					</h3>
+					<h3>{nickname}</h3>
+					<h4>{city}</h4>
+					<p>{briefintroduction}</p>
+					<button className="button-62-delete" onClick={() => deleteUser(id)}>
+						Delete
+					</button>
+					<>
+						<Button
+							variant="primary"
+							className="button-62"
+							onClick={() => setModalShow(true)}
+						>
+							See More
+						</Button>
 
-				<Button variant="primary" onClick={() => setModalShow(true)}>
-					See More
-				</Button>
+						<ExpandedCard show={modalShow} onHide={() => setModalShow(false)} />
+					</>
 
-				<div key={id}>
-					<ExpandedCard
-						show={modalShow}
-						onHide={() => setModalShow(false)}
-						firstname={firstname}
-						profileimage={profileimage}
-						lastname={lastname}
-						nickname={nickname}
-						hobbies={hobbies}
-						city={city}
-						favtvshows={favtvshows}
-						musictaste={musictaste}
-						favouritefood={favouritefood}
-						superpower={superpower}
-						mostconfidentareas={mostconfidentareas}
-						improveknowledge={improveknowledge}
-						favouritequote={favouritequote}
-						interestingfact={interestingfact}
-					/>
+					<div key={id}>
+						<ExpandedCard
+							show={modalShow}
+							onHide={() => setModalShow(false)}
+							firstname={firstname}
+							profileimage={profileimage}
+							lastname={lastname}
+							nickname={nickname}
+							hobbies={hobbies}
+							city={city}
+							favtvshows={favtvshows}
+							musictaste={musictaste}
+							favouritefood={favouritefood}
+							superpower={superpower}
+							mostconfidentareas={mostconfidentareas}
+							improveknowledge={improveknowledge}
+							favouritequote={favouritequote}
+							interestingfact={interestingfact}
+						/>
+					</div>
 				</div>
 			</div>
 		</div>

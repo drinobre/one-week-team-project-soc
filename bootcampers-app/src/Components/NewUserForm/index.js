@@ -65,7 +65,7 @@ function NewUserForm() {
 					</Link>
 				</div>
 				<div>
-					<h1 id="navbar-title">THE BOOTCAMPER CATALOG</h1>
+					<h1 id="navbar-title">THE BOOTCAMPER APP</h1>
 				</div>
 				<div className="navbar-links">
 					<Link

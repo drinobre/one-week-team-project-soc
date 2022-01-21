@@ -39,25 +39,35 @@ function DisplayUserCard({
 					<h3>
 						{firstname} {lastname}
 					</h3>
-					<h3>{nickname}</h3>
+					<h5>{nickname}</h5>
 					<h4>{city}</h4>
-					<p>{briefintroduction}</p>
-					<button className="button-62-delete" onClick={() => deleteUser(id)}>
-						Delete
-					</button>
-					<>
-						<Button
-							variant="primary"
-							className="button-62"
-							onClick={() => setModalShow(true)}
-						>
-							See More
-						</Button>
-
-						<ExpandedCard show={modalShow} onHide={() => setModalShow(false)} />
-					</>
+					<div className="briefintro-hide-overflow">
+						<p>{briefintroduction}</p>
+					</div>
 
 					<div key={id}>
+						<div className="card-buttons">
+							<button
+								className="button-62-delete"
+								onClick={() => deleteUser(id)}
+							>
+								Delete
+							</button>
+							<>
+								<Button
+									variant="primary"
+									className="button-62"
+									onClick={() => setModalShow(true)}
+								>
+									See More
+								</Button>
+
+								<ExpandedCard
+									show={modalShow}
+									onHide={() => setModalShow(false)}
+								/>
+							</>
+						</div>
 						<ExpandedCard
 							show={modalShow}
 							onHide={() => setModalShow(false)}

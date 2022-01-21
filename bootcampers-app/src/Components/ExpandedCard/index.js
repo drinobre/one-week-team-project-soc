@@ -15,7 +15,9 @@ function ExpandedCard(props) {
 				<Modal.Title id="contained-modal-title-vcenter">
 					{props.firstname} {props.lastname}
 					<h6>{props.nickname}</h6>
-					<img src={props.profileimage} height="100px" width="100px"></img>
+					<div className="modal-image-container">
+						<img src={props.profileimage} height="100px" width="100px"></img>
+					</div>
 				</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>

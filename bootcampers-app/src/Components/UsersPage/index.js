@@ -193,6 +193,56 @@ function UsersPage() {
 						favouritequote={"my gran could do it better"}
 						interestingfact={"I'm the best chef in the world"}
 					/>
+					<DisplayUserCard
+						firstname={"Catrin"}
+						lastname={"Mentzoni"}
+						nickname={"Cat"}
+						city={"High Peak, Derbyshire"}
+						briefintroduction={
+							"My name is Cat. I am 38 from Wales. I have two daughters who are 5 and 1 years old. I used to be a primary school teacher. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere neque diam, nec vehicula orci porttitor sed. Fusce dictum dolor sed ornare auctor. Sed pharetra quam nisi, a posuere mi"
+						}
+						profileimage={
+							"https://media-exp1.licdn.com/dms/image/C4D03AQFLqFAOliItyg/profile-displayphoto-shrink_200_200/0/1635801150473?e=1645056000&v=beta&t=EO9Mgkjj3EcPGP52RdU2RGzpEjHsFSkmtKStU0oiTUs"
+						}
+						id={431413}
+						deleteUser={deleteUser}
+						hobbies={
+							"travel, listening to music, playing guitar and bass guitar, swimming, walking, cooking, paddleboarding, campervan"
+						}
+						favtvshows={"don't have any"}
+						musictaste={
+							"Eclectic - Rock, metal, indie, 60s, 50s, acid house, Northern Soul, Post Punk"
+						}
+						favouritefood={"sushi, seafood, pizza"}
+						superpower={"flying"}
+						mostconfidentareas={"Javascript, Node JS"}
+						improveknowledge={"React"}
+						favouritequote={"Reach for the sky"}
+						interestingfact={"I can speak Welsh"}
+					/>
+					<DisplayUserCard
+						firstname={"Fatou"}
+						lastname={"Cham"}
+						nickname={"ChaCha"}
+						city={"Birmingham"}
+						briefintroduction={
+							"I recently graduated with a uni with a degree in Criminology with Psychology. I love Bollywood movies and music, I'm obsessed with Kdramas. I'm a freelance makeup artist.  "
+						}
+						profileimage={
+							"https://i.pinimg.com/originals/19/85/7a/19857a32e62cc620d23b0290140765f3.jpg"
+						}
+						id={4234423432}
+						deleteUser={deleteUser}
+						hobbies={"Watching Kdramas"}
+						favtvshows={"Game of Thrones"}
+						musictaste={"Arijit Singh"}
+						favouritefood={"Ebbeh"}
+						superpower={"Teleportation"}
+						mostconfidentareas={"CSS, Node, SQL"}
+						improveknowledge={"React"}
+						favouritequote={"If you think you're bad, I'm your dad - Rocky"}
+						interestingfact={"lorem ipsum"}
+					/>
 				</section>
 			</div>
 		</>

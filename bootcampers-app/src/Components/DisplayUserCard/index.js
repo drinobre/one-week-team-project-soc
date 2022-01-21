@@ -39,7 +39,7 @@ function DisplayUserCard({
 					<h3>
 						{firstname} {lastname}
 					</h3>
-					<h5>{nickname}</h5>
+					<h5 className="nickname-card">{nickname}</h5>
 					<h4>{city}</h4>
 					<div className="briefintro-hide-overflow">
 						<p>{briefintroduction}</p>

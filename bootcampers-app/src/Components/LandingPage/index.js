@@ -6,7 +6,7 @@ function LandingPage() {
 	return (
 		<div className="landingPage">
 			<div>
-				<h1 id="app-title">THE BOOTCAMPER CATALOG</h1>
+				<h1 id="app-title">THE BOOTCAMPER APP</h1>
 			</div>
 			<div className="enter-site">
 				<h1>ENTER SITE</h1>

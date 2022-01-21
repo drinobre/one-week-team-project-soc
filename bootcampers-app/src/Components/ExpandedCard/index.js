@@ -13,10 +13,10 @@ function ExpandedCard(props) {
 		>
 			<Modal.Header closeButton className="modal-header">
 				<Modal.Title id="contained-modal-title-vcenter">
-					<h2>
+					<h1 className="modal-username">
 						{props.firstname} {props.lastname}
-					</h2>
-					<h6>{props.nickname}</h6>
+					</h1>
+					<h5>{props.nickname}</h5>
 					<div className="modal-image-container">
 						<img src={props.profileimage} height="150px" width="150px"></img>
 					</div>
@@ -24,37 +24,37 @@ function ExpandedCard(props) {
 			</Modal.Header>
 			<Modal.Body classname="modal-body">
 				<div className="modal-body-left">
-					<h3>City:</h3>
+					<h3>CITY:</h3>
 					<p>{props.city}</p>
 					<p> {props.briefintroduction}</p>
-					<h3>Hobbies:</h3>
+					<h3>HOBBIES:</h3>
 					<p>{props.hobbies}</p>
-					<h3>Favourite TV shows and movies:</h3>
+					<h3>FAVOURITE TV SHOWS AND MOVIES:</h3>
 					<p>{props.favtvshows}</p>
-					<h3>Taste in music:</h3>
+					<h3>TASTE IN MUSIC:</h3>
 					<p>{props.musictaste}</p>
 
-					<h3>Favourite food:</h3>
+					<h3>FAVOURITE FOOD :</h3>
 					<p>{props.favouritefood}</p>
-					<h3>Superpower of choice:</h3>
+					<h3>SUPERPOWER OF CHOICE:</h3>
 					<p>{props.superpower}</p>
 				</div>
 				<div className="modal-body-right">
-					<h3>Areas I feel most confident:</h3>
+					<h3>AREAS OF MOST CONFIDENCE:</h3>
 					<p>{props.mostconfidentareas}</p>
-					<h3>Where I'd like to improve:</h3>
+					<h3>AREAS I'D LIKE TO IMPROVE:</h3>
 					<p>{props.improveknowledge}</p>
-					<h3>Favourite quote:</h3>
+					<h3>FAVOURITE QUOTE:</h3>
 					<p>
 						{"'"}
 						{props.favouritequote}
 						{"'"}
 					</p>
-					<h3>The most interesting fact I know:</h3>
+					<h3>THE MOST INTERESTING FACT I KNOW:</h3>
 					<p>{props.interestingfact}</p>
 				</div>
 			</Modal.Body>
-			<Modal.Footer>
+			<Modal.Footer className="modal-footer">
 				<Button onClick={props.onHide}>Close</Button>
 			</Modal.Footer>
 		</Modal>

@@ -5,16 +5,23 @@ import { Routes, Route, Link } from "react-router-dom";
 function LandingPage() {
 	return (
 		<div className="landingPage">
-			<h1 id="app-title">BOOTCAMPER APP</h1>
+			<div>
+				<h1 id="app-title">THE BOOTCAMPER APP</h1>
+			</div>
+			<div className="enter-site">
+				<h1>ENTER SITE</h1>
+			</div>
 			<div>
 				<Link to="/users">
 					<img
 						alt="soc-logo"
 						src="https://www.schoolofcode.co.uk/static/logo-51c754388b198e5bbb0d08a971ebbfa2.png"
+						height="500rem"
+						width="500rem"
 					></img>
-					<button className="btn btn-success">
+					{/* <button className="btn btn-success">
 						<Link to="/form">Add my card</Link>
-					</button>
+					</button> */}
 				</Link>
 			</div>
 		</div>

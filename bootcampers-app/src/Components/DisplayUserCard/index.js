@@ -1,5 +1,6 @@
 import React from "react";
 import ExpandedCard from "../ExpandedCard";
+import Button from "react-bootstrap/Button";
 
 function DisplayUserCard({
 	firstname,
@@ -20,6 +21,7 @@ function DisplayUserCard({
 	favouritequote,
 	interestingfact,
 }) {
+	const [modalShow, setModalShow] = React.useState(false);
 	return (
 		<div className="userCard" key={id}>
 			<div className="upper-container">
@@ -27,38 +29,66 @@ function DisplayUserCard({
 					<img
 						src={profileimage}
 						alt="profile-image"
-						height="100px"
-						width="100px"
+						height="300px"
+						width="300px"
 					/>
 				</div>
 			</div>
 			<div className="lower-container">
-				<h3>
-					{firstname}
-					{lastname}
-				</h3>
-				<h3>{nickname}</h3>
-				<h4>{city}</h4>
-				<p>{briefintroduction}</p>
+				<div className="card-content">
+					<h3>
+						{firstname} {lastname}
+					</h3>
+					<h5 className="nickname-card">{nickname}</h5>
+					<h4>{city}</h4>
+					<div className="briefintro-hide-overflow">
+						<p>{briefintroduction}</p>
+					</div>
+
+					<div key={id}>
+						<div className="card-buttons">
+							<button
+								className="button-62-delete"
+								onClick={() => deleteUser(id)}
+							>
+								Delete
+							</button>
+							<>
+								<Button
+									variant="primary"
+									className="button-62"
+									onClick={() => setModalShow(true)}
+								>
+									See More
+								</Button>
+
+								<ExpandedCard
+									show={modalShow}
+									onHide={() => setModalShow(false)}
+								/>
+							</>
+						</div>
+						<ExpandedCard
+							show={modalShow}
+							onHide={() => setModalShow(false)}
+							firstname={firstname}
+							profileimage={profileimage}
+							lastname={lastname}
+							nickname={nickname}
+							hobbies={hobbies}
+							city={city}
+							favtvshows={favtvshows}
+							musictaste={musictaste}
+							favouritefood={favouritefood}
+							superpower={superpower}
+							mostconfidentareas={mostconfidentareas}
+							improveknowledge={improveknowledge}
+							favouritequote={favouritequote}
+							interestingfact={interestingfact}
+						/>
+					</div>
+				</div>
 			</div>
-			<button className="btn btn-danger" onClick={() => deleteUser(id)}>
-				Delete
-			</button>
-			<ExpandedCard
-				firstname={firstname}
-				profileimage={profileimage}
-				lastname={lastname}
-				nickname={nickname}
-				hobbies={hobbies}
-				favtvshows={favtvshows}
-				musictaste={musictaste}
-				favouritefood={favouritefood}
-				superpower={superpower}
-				mostconfidentareas={mostconfidentareas}
-				improveknowledge={improveknowledge}
-				favouritequote={favouritequote}
-				interestingfact={interestingfact}
-			/>
 		</div>
 	);
 }

@@ -1,123 +1,63 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+// 	interestingfact,
 
-function ExpandedCard({
-	firstname,
-	lastname,
-	nickname,
-	city,
-	briefintroduction,
-	hobbies,
-	profileimage,
-	favtvshows,
-	musictaste,
-	favouritefood,
-	superpower,
-	mostconfidentareas,
-	improveknowledge,
-	favouritequote,
-	interestingfact,
-}) {
+function ExpandedCard(props) {
 	return (
-		<>
-			{/* <button
-				type="button"
-				class="btn btn-success"
-				data-toggle="modal"
-				data-target="#myModal"
-			>
-				View
-			</button> */}
-
-			{/* <div className="modal" id="myModal">
-				<div className="modal-dialog modal-xl">
-					<div className="modal-content">
-						<div className="modal-upper-container">
-							<div className="modal-image-container">
-								<img
-									src={profileimage}
-									alt="profile-image"
-									height="100px"
-									width="100px"
-								></img>
-							</div>
-							<div>
-								<h4 class="modal-title">
-									{firstname}
-									{lastname}
-								</h4>
-								<h3>{nickname}</h3>
-								<button type="button" class="close" data-dismiss="modal">
-									&times;
-								</button>
-							</div>
-						</div>
-
-						<div class="modal-lower-container">
-							<h2>I'm Based In...{city}</h2>
-							<h2>A bit about me:</h2>
-							<p>{briefintroduction}</p>
-							<h3>My hobbies:</h3>
-							<p>{hobbies}</p>
-							<h3>My favourite shows:</h3>
-							<p>{favtvshows}</p>
-							<h3>What kind of music am I into?</h3>
-							<p>{musictaste}</p>
-							<h3>My favourite foods:</h3>
-							<p>{favouritefood}</p>
-							<h3>If I had a superpower, what would it be...</h3>
-							<p>{superpower}</p>
-							<h3>Which learning areas do I feel most confident in..</h3>
-							<p>{mostconfidentareas}</p>
-							<h3>In which areas would I like to improve..</h3>
-							<p>{improveknowledge}</p>
-							<h3>My favourite quote</h3>
-							<p>{favouritequote}</p>
-							<h3>The most interesting fact I know...</h3>
-							<p>{interestingfact}</p>
-						</div>
-
-						<div class="modal-footer">
-							<button type="button" class="btn btn-danger" data-dismiss="modal">
-								Close
-							</button>
-						</div>
+		<Modal
+			{...props}
+			size="lg"
+			aria-labelledby="contained-modal-title-vcenter"
+			centered
+		>
+			<Modal.Header closeButton className="modal-header">
+				<Modal.Title id="contained-modal-title-vcenter">
+					<h1 className="modal-username">
+						{props.firstname} {props.lastname}
+					</h1>
+					<h5>{props.nickname}</h5>
+					<div className="modal-image-container">
+						<img src={props.profileimage} height="150px" width="150px"></img>
 					</div>
+				</Modal.Title>
+			</Modal.Header>
+			<Modal.Body classname="modal-body">
+				<div className="modal-body-left">
+					<h3>CITY:</h3>
+					<p>{props.city}</p>
+					<p> {props.briefintroduction}</p>
+					<h3>HOBBIES:</h3>
+					<p>{props.hobbies}</p>
+					<h3>FAVOURITE TV SHOWS AND MOVIES:</h3>
+					<p>{props.favtvshows}</p>
+					<h3>TASTE IN MUSIC:</h3>
+					<p>{props.musictaste}</p>
+
+					<h3>FAVOURITE FOOD :</h3>
+					<p>{props.favouritefood}</p>
+					<h3>SUPERPOWER OF CHOICE:</h3>
+					<p>{props.superpower}</p>
 				</div>
-			</div> */}
-			<button
-				type="button"
-				className="btn btn-primary"
-				data-toggle="modal"
-				data-target="#myModal"
-			>
-				Open modal
-			</button>
-
-			<div className="modal" id="myModal">
-				<div className="modal-dialog">
-					<div className="modal-content">
-						<div className="modal-header">
-							<h4 className="modal-title">Modal Heading</h4>
-							<button type="button" className="close" data-dismiss="modal">
-								&times;
-							</button>
-						</div>
-
-						<div className="modal-body">Modal body..</div>
-
-						<div className="modal-footer">
-							<button
-								type="button"
-								className="btn btn-danger"
-								data-dismiss="modal"
-							>
-								Close
-							</button>
-						</div>
-					</div>
+				<div className="modal-body-right">
+					<h3>AREAS OF MOST CONFIDENCE:</h3>
+					<p>{props.mostconfidentareas}</p>
+					<h3>AREAS I'D LIKE TO IMPROVE:</h3>
+					<p>{props.improveknowledge}</p>
+					<h3>FAVOURITE QUOTE:</h3>
+					<p>
+						{"'"}
+						{props.favouritequote}
+						{"'"}
+					</p>
+					<h3>THE MOST INTERESTING FACT I KNOW:</h3>
+					<p>{props.interestingfact}</p>
 				</div>
-			</div>
-		</>
+			</Modal.Body>
+			<Modal.Footer className="modal-footer">
+				<Button onClick={props.onHide}>Close</Button>
+			</Modal.Footer>
+		</Modal>
 	);
 }
 

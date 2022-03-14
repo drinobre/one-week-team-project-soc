@@ -3,7 +3,7 @@ Bootcamper App
 
 <img src="https://user-images.githubusercontent.com/93347177/158183209-ef682fb2-260c-4547-95c5-c94ccd238688.PNG" width="500px"><br/>
 
- This app was created by a team of four during our School of Code One week project during February 2022.
+ This app was created by a team of four during our School of Code one week project during February 2022.
 
 **Our project brief was to solve a problem experienced by bootcampers. After conducting some research, we identified loneliness and difficulty in connecting with other boot campers as a common issue - which we have addressed through building this app.**
 

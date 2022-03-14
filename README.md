@@ -5,9 +5,9 @@ Bootcamper App
 
  This app was created by a team of four during our School of Code One week project during February 2022.
 
-* Our project brief was to solve a problem experienced by bootcampers. After conducting some research, we identified loneliness and difficulty in connecting with other boot campers as a common issue - which we have addressed through building this app. *
+*Our project brief was to solve a problem experienced by bootcampers. After conducting some research, we identified loneliness and difficulty in connecting with other boot campers as a common issue - which we have addressed through building this app.*
 
-* This app enables bootcampers to connect with each other - allows them to view each other’s interests and location, and also create their own profile. *
+*This app enables bootcampers to connect with each other - allows them to view each other’s interests and location, and also create their own profile.*
 
 This app was built with React using a Postgres database. 
 

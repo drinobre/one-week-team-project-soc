@@ -1,21 +1,67 @@
-# National Bootcamp - Week Nine Project Brief
+Bootcamper App
+===========
 
-For your project, you’ll be using what you’ve learned on the course so far to try and improve the lives of your users. In this case, the users will be close to home: bootcampers!
+<img src="https://user-images.githubusercontent.com/93347177/158183209-ef682fb2-260c-4547-95c5-c94ccd238688.PNG" width="500px"><br/>
 
-To do this, you’ll need to take the time to understand your user (a bootcamper), their experiences, and their problems. What do they need? What problem might they have that your application could solve for them? How can you get into the mindset of your user and keep them at the centre of your problem-solving?
+ This app was created by a team of four during our School of Code One week project during February 2022.
 
-The high level outcomes from this project should be:
+* Our project brief was to solve a problem experienced by bootcampers. After conducting some research, we identified loneliness and difficulty in connecting with other boot campers as a common issue - which we have addressed through building this app. *
 
-- A minimum viable product (MVP) showcasing an innovative full stack application which meets the user need you’ve identified
-- A presentation, complete with how you worked as a team and a demonstration of the project
+* This app enables bootcampers to connect with each other - allows them to view each other’s interests and location, and also create their own profile. *
 
-Your project application should:
+This app was built with React using a Postgres database. 
 
-- Include a user experience created in React
-- Build a REST API which is used by your front-end
-- Be supported by a Postgresql database with multiple tables
-- Be built and managed in an agile way
 
-Remember, you only have a few days to code a solution, so being agile is key. That means brainstorming what you want to build, and working in sprints to deliver value each time. After each sprint, you can reassess and either continue on course or iterate towards a better solution. Have a plan which is incremental steps, rather than all or nothing.
+**Authors**
+--------------
+[@CatrinMentzoni](https://github.com/Babyoilrig)
+[@AdrianaLawrence](https://github.com/drinobre)
+[@RoryMaguire](https://github.com/rory-maguire)
+[@FatouCham](https://github.com/Fatu-cham)
 
-Click the link to see the [Project Guidelines](https://github.com/SchoolOfCode/project-guidelines/blob/master/project-week.md)
+ 
+**Installation**
+-----------------
+
+**To run this app:**
+<br/><br/>
+Please note that this front-end repository, works in conjunction with the back-end repository, which can be found [HERE](https://github.com/SchoolOfCode/national-project-week-repo-2-farc-incorporated) 
+<br/><br/>
+Clone down both repositories using an IDE such as VS Code.
+<br/><br/>
+In both repos: CD into "national-project-week-farc-incorporated" and then into "bootcampers-app".
+<br/><br/>
+In both repos: Run the command Npm i- to install all the necessary dependencies.
+<br/><br/>
+In both repos: Next, run the command Npm Start - in order to open the app in your browser.
+<br/><br/>
+ 
+ 
+ 
+ 
+**Features**
+-----------------
+* View bootcampers' personal details such as location, hobbies, favourite tv shows and films etc.
+<br/><br/>
+* Create a profile page
+<br/><br/>
+* Modal feature in order to view enlarged version of a profile
+<br/><br/>
+ 
+ 
+ 
+**Feedback**
+-----------------
+If you have any feedback, please raise an issue in the issues tab or reach out to us on **GitHub** at:
+
+[@CatrinMentzoni](https://github.com/Babyoilrig) <br/>
+[@AdrianaLawrence](https://github.com/drinobre) <br/>
+[@RoryMaguire](https://github.com/rory-maguire) <br/>
+[@FatouCham](https://github.com/Fatu-cham) <br/>
+
+**or on LinkedIn:** <br/>
+[@CatrinMentzoni](https://www.linkedin.com/in/catrin-mentzoni/) <br/>
+[@AdrianaLawrence](https://www.linkedin.com/in/adriana-nobre-lawrence/) <br/>
+[@RoryMaguire](https://www.linkedin.com/in/rory-maguire-4522aa157/) <br/>
+[@FatouCham](https://www.linkedin.com/in/fatou-cham-797504230/) <br/>
+

@@ -14,10 +14,10 @@ This app was built with React using a Postgres database.
 
 **Authors**
 --------------
-[@CatrinMentzoni](https://github.com/Babyoilrig)
-[@AdrianaLawrence](https://github.com/drinobre)
-[@RoryMaguire](https://github.com/rory-maguire)
-[@FatouCham](https://github.com/Fatu-cham)
+[@CatrinMentzoni](https://github.com/Babyoilrig) <br/><br/>
+[@AdrianaLawrence](https://github.com/drinobre) <br/><br/>
+[@RoryMaguire](https://github.com/rory-maguire) <br/><br/>
+[@FatouCham](https://github.com/Fatu-cham) <br/><br/>
 
  
 **Installation**

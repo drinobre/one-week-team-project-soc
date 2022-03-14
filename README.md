@@ -25,15 +25,15 @@ This app was built with React using a Postgres database.
 
 **To run this app:**
 <br/><br/>
-Please note that this front-end repository, works in conjunction with the back-end repository, which can be found [HERE](https://github.com/SchoolOfCode/national-project-week-repo-2-farc-incorporated) 
+* Please note that this front-end repository, works in conjunction with the back-end repository, which can be found [HERE](https://github.com/SchoolOfCode/national-project-week-repo-2-farc-incorporated) 
 <br/><br/>
-Clone down both repositories using an IDE such as VS Code.
+* Clone down both repositories using an IDE such as VS Code.
 <br/><br/>
-In both repos: CD into "national-project-week-farc-incorporated" and then into "bootcampers-app".
+* In both repos: CD into "national-project-week-farc-incorporated" and then into "bootcampers-app".
 <br/><br/>
-In both repos: Run the command Npm i- to install all the necessary dependencies.
+* In both repos: Run the command Npm i- to install all the necessary dependencies.
 <br/><br/>
-In both repos: Next, run the command Npm Start - in order to open the app in your browser.
+* In both repos: Next, run the command Npm Start - in order to open the app in your browser.
 <br/><br/>
  
  

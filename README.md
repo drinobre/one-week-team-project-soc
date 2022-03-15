@@ -9,7 +9,7 @@ Bootcamper App
 
 **This app enables bootcampers to connect with each other - allows them to view each other’s interests, location, and also create their own profile.**
 
-This app was built with React using a Postgres database. The deployed site can be viewed here: <br/>https://61f82496237fcb14b1cfa045--priceless-poitras-7226c6.netlify.app/
+This app was built with React using a Postgres database. <br/><br/> The deployed site can be viewed here: <br/>https://61f82496237fcb14b1cfa045--priceless-poitras-7226c6.netlify.app/
 
 
 **Authors**
